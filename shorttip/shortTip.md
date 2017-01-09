@@ -15,3 +15,18 @@ $ yarn add --dev babel-polyfill
   entry: ['babel-polyfill', ... ],
 ...
 ```
+
+## 2. koa-router를 분명 제대로 사용하였는데 app.use() requires a generator function이 나를 괴롭힐 때
+1. node.js <= 6, koa <= 1 일 때
+koa-router의 버전을 5.x로 낮춘다.
+```
+$ npm install koa-router@^5
+or
+$ yarn add koa-router@^5
+```
+
+2. node.js >= 7, koa >= 일 때
+[https://github.com/alexmingoia/koa-router/tree/master/](https://github.com/alexmingoia/koa-router/tree/master/)
+[https://github.com/koajs/koa/tree/2.0.0-alpha.3](https://github.com/koajs/koa/tree/2.0.0-alpha.3)
+위 링크들을 참고하여 koa2에 맞춰서 migration을 한다
+
